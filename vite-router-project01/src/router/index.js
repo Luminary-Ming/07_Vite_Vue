@@ -92,7 +92,11 @@ const router = createRouter({
             ],
         },
         {
-            path: "/about",
+            /*
+                params 传递参数，必须要在路由后面添加参数名。
+                    如果路由后面没有 /:username/:age/:sex，地址栏就没有参数，刷新一下，数据就会消失
+            */
+            path: "/about/:username/:age/:sex",
             name: "about",
             // 组件动态加载
             component: () => import("@/views/AboutUs.vue"),

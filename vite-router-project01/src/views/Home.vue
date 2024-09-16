@@ -35,8 +35,10 @@ export default {
         },
         goAbout2() {
             this.$router.push({
-                path: "/about",
-                // 跳转时，使用 params 携带参数
+                // 使用 params 时，如果使用 path 传递参数，就传不过去，undefined
+                // path:"/about"
+                name: "about",
+                // 使用 params 传参只能使用 name 进行引入
                 params: {
                     username: "卡特琳娜",
                     age: 18,
